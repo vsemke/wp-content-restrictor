@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доступ ограничен | Rucore</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            animation: fadeIn 0.6s ease-out;
+            margin: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(90deg, #2c3e50 0%, #4a6491 100%);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .message {
+            background: #f8f9fa;
+            border-left: 4px solid #4a6491;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 25px;
+        }
+        
+        .message a {
+            color: #4a6491;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .message a:hover {
+            color: #2c3e50;
+            text-decoration: underline;
+        }
+        
+        blockquote {
+            background: #fff9e6;
+            border-left: 4px solid #ffc107;
+            padding: 18px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            position: relative;
+        }
+        
+        blockquote:before {
+            content: """;
+            position: absolute;
+            top: -15px;
+            left: 10px;
+            font-size: 60px;
+            color: rgba(255, 193, 7, 0.2);
+            font-family: Arial, sans-serif;
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 25px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+        
+        .image-container img:hover {
+            transform: scale(1.02);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-weight: 500;
+            color: #4a6491;
+            font-size: 18px;
+        }
+        
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: #4a6491;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #2c3e50;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #4a6491;
+            border: 2px solid #4a6491;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(74, 100, 145, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .actions {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 22px;
+            }
+            
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Доступ к контенту ограничен</h1>
+            <p>Внимание! Ограничение в соответствии с законодательством РФ</p>
+        </div>
+        
+        <div class="content">
+            <div class="message">
+                В соответствии с законодательством Российской Федерации (включая Федеральный закон № 281-ФЗ), доступ к данному контенту ограничен для неавторизованных пользователей с IP-адресами, зарегистрированными в РФ. Это связано с необходимостью соблюдения требования по предотвращению распространения запрещенной информации, включая материалы, связанные с обходом блокировок, хакерством или иными действиями, потенциально нарушающими закон.
+            </div>
+            
+            <blockquote>
+                По вопросам доступа к материалам обращайтесь к администрации сайта через форму обратной связи.
+            </blockquote>
+            
+            <div class="image-container">
+                <img src="img_653a1cded98f8-id26239.jpg" alt="Доступ ограничен" width="506" height="576">
+            </div>
+            
+            <div class="footer">
+                <b>Спасибо, что вы с нами!</b>
+            </div>
+            
+            <div class="actions">
+                <a href="/login/" class="btn btn-primary">Войти в аккаунт</a>
+                <a href="/signup/" class="btn btn-secondary">Зарегистрироваться</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Небольшая анимация для элементов при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = ['.message', 'blockquote', '.image-container', '.footer'];
+            
+            elements.forEach((element, index) => {
+                const el = document.querySelector(element);
+                if (el) {
+                    el.style.opacity = 0;
+                    el.style.transform = 'translateY(10px)';
+                    setTimeout(() => {
+                        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                        el.style.opacity = 1;
+                        el.style.transform = 'translateY(0)';
+                    }, 200 + (index * 150));
+                }
+            });
+        });
+    </script>
+</body>
+</html>
